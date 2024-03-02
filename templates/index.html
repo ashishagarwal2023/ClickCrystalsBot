@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"
+    ></script>
+
+    <title>ClickCrystals Bot</title>
+  </head>
+  <body>
+    <header>
+      <div id="menu">
+        <h1>💭 ClickCrystals Bot</h1>
+        <button id="clear" title="Clear chat history">🔥</button>
+      </div>
+    </header>
+
+    <main id="chat">
+      <div id="usage">
+        <p>
+          ClickCrystalScripts GPT Bot<br />It can make errors, consider checking
+          important things.<br />This bot is dependent on ChatGPT. Ask "What's
+          CCS?"<br>Made by <a href="https://github.com/ashishagarwal2023">Ashish Agarwal</a>
+        </p>
+        <p>
+          Find the project on
+          <a target="_blank" href="https://github.com/itzispyder/clickcrystals">
+            GitHub</a
+          >.
+        </p>
+      </div>
+      <!-- <div class="message">
+        <div class="user">User Message Content</div>
+        <div class="assistant">
+            <p><span class="error">Error: POST <a href="https://api.openai.com/v1/chat/completions">https://api.openai.com/v1/chat/completions</a> 401</span></p>
+        </div>
+    </div>     -->
+    </main>
+
+    <footer>
+      <div id="prompt">
+        <input
+          type="text"
+          name="input"
+          placeholder="Prompt…"
+          autocomplete="off"
+          id="userInput"
+          required
+        />
+        <button title="Submit prompt" id="submitBtn">🚀</button>
+      </div>
+    </footer>
+
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
