@@ -23,6 +23,7 @@ print("Fetching transcript")
 response = requests.get(url)
 if response.status_code == 200:
     print("Transcript fetched, prompting it...")
+    print(response.text)
     bot.prompt(response.text)
 else:
     print("Failed to fetch the URL:", response.status_code)
