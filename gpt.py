@@ -65,7 +65,6 @@ class Bot:
             if chunk.startswith("data: {\"message\":"):
                 try:
                     data = json.loads(chunk[6:])
-                    print(data)
                 except json.JSONDecodeError:
                     raise Exception("Couldn't parse assistant's answer into a valid JSON. Might be a bug.")
 
