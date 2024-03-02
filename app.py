@@ -1,16 +1,12 @@
 try:
     from flask import Flask, render_template, request, jsonify
     import requests
-    import json
-    from uuid import uuid4
 except:
     import os
     os.system("pip install flask")
     os.system("pip install requests")
     from flask import Flask, render_template, request
     import requests
-    import json
-    from uuid import uuid4
 
 try:
     from gpt import TokenRateLimitedError, Bot
@@ -48,5 +44,5 @@ def new_chat():
     bot.reset()
     return jsonify({'message': 'Chat session reset successfully'})
 
-app.run(debug=True)
-print("It's running")
+if __name__ == '__main__':
+    app.run()
