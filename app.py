@@ -18,16 +18,6 @@ access_token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFU
 bot = Bot(access_token)
 print("Bot is ready")
 
-url = "https://raw.githubusercontent.com/ashishagarwal2023/ClickCrystalsXYZ/35eb057ad0b0aa1ca5f8d3d1d3618bcfaaf2dd0b/msg.md"
-print("Fetching transcript")
-response = requests.get(url)
-if response.status_code == 200:
-    print("Transcript fetched, prompting it...")
-    print(response.text)
-    bot.prompt(response.text)
-else:
-    print("Failed to fetch the URL:", response.status_code)
-
 # main page chat
 @app.route('/')
 def home():
